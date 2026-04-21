@@ -83,9 +83,3 @@ DELETE /orders/:id     → Eliminar pedido
 > El servicio de pedidos valida que el `userId` exista antes de crear el pedido.
 
 ---
-
-## Notas
-
-- El almacenamiento es en memoria, los datos se pierden al reiniciar.
-- Los servicios se comunican entre sí internamente; el cliente solo habla con el gateway.
-- Para usar base de datos real (MongoDB, PostgreSQL, etc.) se reemplaza el array en memoria del `.service.ts` correspondiente.
