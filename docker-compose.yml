@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "3000:3000"
+    environment:
+      - USERS_URL=http://users-service:3001
+      - PRODUCTS_URL=http://products-service:3002
+      - ORDERS_URL=http://orders-service:3003
+    depends_on:
+      - users-service
+      - products-service
+      - orders-service
+
+  users-service:
+    build: ./users-service
+    ports:
+      - "3001:3001"
+
+  products-service:
+    build: ./products-service
+    ports:
+      - "3002:3002"
+
+  orders-service:
+    build: ./orders-service
+    ports:
+      - "3003:3003"
+    environment:
+      - USERS_URL=http://users-service:3001
