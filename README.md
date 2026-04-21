@@ -1,5 +1,10 @@
 # eCommerce - Arquitectura de Microservicios con NestJS
 
+## Integrantes de la activida
+Juan Pablo Borja Espitia - 20202020091
+Daniel Santiago Espindola Ortiz -20182020053
+Johan Sebastian Marin Rojas - 20201020082
+
 Tres servicios independientes comunicados a través de un API Gateway central.
 
 ## Servicios y puertos
